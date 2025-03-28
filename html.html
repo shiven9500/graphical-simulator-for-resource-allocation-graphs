@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resource Allocation Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>Resource Allocation Simulator</h1>
+        </header>
+        
+        <main>
+            <section id="graph-canvas"></section>
+            <section id="controls">
+                <div id="node-creation">
+                    <input type="text" id="node-name" placeholder="Node Name">
+                    <input type="number" id="node-capacity" placeholder="Capacity">
+                    <button id="add-node">Add Node</button>
+                </div>
+                <div id="allocation-strategies">
+                    <select id="strategy-selector">
+                        <option>Round Robin</option>
+                        <option>Proportional</option>
+                        <option>Priority-Based</option>
+                    </select>
+                    <button id="run-simulation">Run Simulation</button>
+                </div>
+            </section>
+            
+            <section id="simulation-results">
+                <canvas id="results-chart"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="scripts/graph-renderer.js"></script>
+    <script src="scripts/resource-allocator.js"></script>
+</body>
+</html>
